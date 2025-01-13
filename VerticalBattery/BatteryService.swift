@@ -15,6 +15,10 @@ enum BatteryService {
         getProperty("DeviceName") as? String
     }
 
+    static var enabled: Bool {
+        deviceName != nil
+    }
+
     private static func getProperty(_ key: String) -> CFTypeRef? {
         let prop = IORegistryEntryCreateCFProperty(service, key as CFString, nil, 0)
         return prop?.takeUnretainedValue()
