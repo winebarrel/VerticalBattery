@@ -26,11 +26,31 @@ struct VerticalBatteryApp: App {
                 NSApplication.shared.terminate(self)
             }
         } label: {
-            if BatteryService.enabled {
-                Image("vbtry.100pct") // TODO:
+            if BatteryService.enabled,
+               let currentCapacity = battery.currentCapacity,
+               let isCharging = battery.isCharging
+            {
+                let name = buildIcon(currentCapacity: currentCapacity, isCharging: isCharging)
+                Image(name)
             } else {
                 Image("vbtry.slash")
             }
         }
+    }
+
+    private func buildIcon(currentCapacity: Int, isCharging: Bool) -> String {
+        let pct = Int(ceil(Double(currentCapacity) / 5) * 5)
+
+        let color = if isCharging {
+            ".green"
+        } else if currentCapacity <= 10 {
+            ".red"
+        } else if currentCapacity <= 20 {
+            ".yellow"
+        } else {
+            ""
+        }
+
+        return "vbtry." + String(pct) + "pct" + color
     }
 }
