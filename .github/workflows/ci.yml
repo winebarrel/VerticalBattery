@@ -17,8 +17,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Lint
-        uses: norio-nomura/action-swiftlint@3.2.1
+      - uses: cirruslabs/swiftlint-action@v1
+        with:
+          version: latest
 
   build:
     name: Build and Analyse
