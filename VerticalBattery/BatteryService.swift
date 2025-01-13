@@ -1,4 +1,5 @@
 import IOKit
+import IOKit.ps
 
 enum BatteryService {
     private static let service = IOServiceGetMatchingService(kIOMainPortDefault, IOServiceNameMatching("AppleSmartBattery"))
@@ -17,6 +18,12 @@ enum BatteryService {
 
     static var enabled: Bool {
         deviceName != nil
+    }
+
+    static var pluggedIn: Bool {
+        let psInfo = IOPSCopyPowerSourcesInfo().takeRetainedValue()
+        let psType = IOPSGetProvidingPowerSourceType(psInfo).takeRetainedValue()
+        return psType as String == kIOPSACPowerValue
     }
 
     private static func getProperty(_ key: String) -> CFTypeRef? {
