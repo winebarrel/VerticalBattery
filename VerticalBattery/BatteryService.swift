@@ -1,4 +1,3 @@
-import IOKit
 import IOKit.ps
 
 enum BatteryService {
