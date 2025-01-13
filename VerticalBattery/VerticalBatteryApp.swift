@@ -3,8 +3,12 @@ import SwiftUI
 @main
 struct VerticalBatteryApp: App {
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        MenuBarExtra {
+            Button("Quit") {
+                NSApplication.shared.terminate(self)
+            }
+        } label: {
+            Image(systemName: "leaf")
         }
     }
 }
