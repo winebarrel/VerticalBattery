@@ -1,0 +1,9 @@
+disabled_rules:
+  - line_length
+  - nesting
+  - function_body_length
+  - cyclomatic_complexity
+  - opening_brace
+analyzer_rules:
+  - unused_declaration
+  - unused_import
