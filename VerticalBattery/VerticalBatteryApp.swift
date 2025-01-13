@@ -17,6 +17,16 @@ struct VerticalBatteryApp: App {
                 Text("N/A")
             }
             Divider()
+            Button("About VerticalBattery") {
+                let githubRepo = "github.com/winebarrel/VerticalBattery"
+                NSApp.orderFrontStandardAboutPanel(options: [
+                    NSApplication.AboutPanelOptionKey.applicationIcon: NSImage(named: "AppIcon")!,
+                    NSApplication.AboutPanelOptionKey.credits: NSMutableAttributedString(
+                        string: githubRepo,
+                        attributes: [.link: "https://" + githubRepo]
+                    )
+                ])
+            }
             Toggle(isOn: $menuBarState.launchAtLogin) {
                 Text("Launch at login")
             }
