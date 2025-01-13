@@ -26,7 +26,11 @@ struct VerticalBatteryApp: App {
                 NSApplication.shared.terminate(self)
             }
         } label: {
-            Image(systemName: "leaf")
+            if BatteryService.enabled {
+                Image("vbtry.100pct") // TODO:
+            } else {
+                Image("vbtry.slash")
+            }
         }
     }
 }
