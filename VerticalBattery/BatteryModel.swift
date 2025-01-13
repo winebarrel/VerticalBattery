@@ -5,6 +5,7 @@ import SwiftUI
 class BatteryModel: ObservableObject {
     @Published var currentCapacity: Int?
     @Published var isCharging: Bool?
+    @Published var pluggedIn: Bool?
 
     init() {
         guard BatteryService.enabled else {
@@ -26,10 +27,12 @@ class BatteryModel: ObservableObject {
         guard BatteryService.enabled else {
             currentCapacity = nil
             isCharging = nil
+            pluggedIn = nil
             return
         }
 
         currentCapacity = BatteryService.currentCapacity
         isCharging = BatteryService.isCharging
+        pluggedIn = BatteryService.pluggedIn
     }
 }
