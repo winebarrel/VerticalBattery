@@ -10,8 +10,6 @@ Small vertical battery icon on menu bar.
 | <= 20% | ![](https://github.com/user-attachments/assets/4362d361-2984-45b2-a414-7f333324dfc7) | ![](https://github.com/user-attachments/assets/3e1047b9-7829-4bc7-b6cb-ab81e3187317) |
 | <= 10% | ![](https://github.com/user-attachments/assets/af459169-fa43-45ef-a889-bfbdb2685dcb) | ![](https://github.com/user-attachments/assets/8b337830-263c-4481-a6f0-6d1b3117b3ce) |
 
-
-
 ## Note
 
 App icon from https://icon.kitchen
