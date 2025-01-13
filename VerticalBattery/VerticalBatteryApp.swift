@@ -42,11 +42,11 @@ struct VerticalBatteryApp: App {
         let pct = Int(ceil(Double(currentCapacity) / 5) * 5)
 
         let color = if isCharging {
-            ".green"
-        } else if currentCapacity <= 10 {
-            ".red"
-        } else if currentCapacity <= 20 {
             ".yellow"
+        } else if BatteryService.pluggedIn {
+            ".green"
+        } else if currentCapacity <= 20 {
+            ".red"
         } else {
             ""
         }
