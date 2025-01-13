@@ -3,7 +3,7 @@ import SwiftUI
 @main
 struct VerticalBatteryApp: App {
     @StateObject private var battery = BatteryModel()
-    @ObservedObject var menuBarState = MenuBarState()
+    @ObservedObject private var menuBarState = MenuBarState()
 
     var body: some Scene {
         MenuBarExtra {
