@@ -2,7 +2,7 @@
 
 Small vertical battery icon on menu bar.
 
-![](https://github.com/user-attachments/assets/eb44b348-c6e2-4f2c-84e2-0c17b9cb2b5b)
+![](https://github.com/user-attachments/assets/8e62aec2-05c7-412c-9c6e-0e6a7314477a)
 
 | | AC Power | Charging | Battery Power |
 | - | - | - | - |
