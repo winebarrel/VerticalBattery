@@ -38,9 +38,14 @@ struct VerticalBatteryApp: App {
         } label: {
             if BatteryService.enabled,
                let currentCapacity = battery.currentCapacity,
-               let isCharging = battery.isCharging
+               let isCharging = battery.isCharging,
+               let pluggedIn = battery.pluggedIn
             {
-                let name = buildIcon(currentCapacity: currentCapacity, isCharging: isCharging)
+                let name = buildIcon(
+                    currentCapacity: currentCapacity,
+                    isCharging: isCharging,
+                    pluggedIn: pluggedIn
+                )
                 Image(name)
             } else {
                 Image("vbtry.slash")
@@ -48,12 +53,12 @@ struct VerticalBatteryApp: App {
         }
     }
 
-    private func buildIcon(currentCapacity: Int, isCharging: Bool) -> String {
+    private func buildIcon(currentCapacity: Int, isCharging: Bool, pluggedIn: Bool) -> String {
         let pct = Int(ceil(Double(currentCapacity) / 5) * 5)
 
         let color = if isCharging {
             ".yellow"
-        } else if BatteryService.pluggedIn {
+        } else if pluggedIn {
             ".green"
         } else if currentCapacity <= 20 {
             ".red"
