@@ -1,5 +1,7 @@
 # VerticalBattery
 
+[![](https://github.com/user-attachments/assets/345761b5-7c46-4f3d-ad9c-382082110f05)](https://apps.apple.com/jp/app/verticalbattery/id6742373118)
+
 Small vertical battery icon on menu bar.
 
 ![](https://github.com/user-attachments/assets/8e62aec2-05c7-412c-9c6e-0e6a7314477a)
