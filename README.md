@@ -1,6 +1,6 @@
 # VerticalBattery [![CI](https://github.com/winebarrel/VerticalBattery/actions/workflows/ci.yml/badge.svg)](https://github.com/winebarrel/VerticalBattery/actions/workflows/ci.yml)
 
-[![](https://github.com/user-attachments/assets/345761b5-7c46-4f3d-ad9c-382082110f05)](https://apps.apple.com/jp/app/verticalbattery/id6742373118)
+[![](https://github.com/user-attachments/assets/345761b5-7c46-4f3d-ad9c-382082110f05)](https://apps.apple.com/app/verticalbattery/id6742373118)
 
 Small vertical battery icon on menu bar.
 
