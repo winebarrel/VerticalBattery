@@ -1,5 +1,4 @@
 import Foundation
-import SwiftUI
 
 @MainActor
 class BatteryModel: ObservableObject {
