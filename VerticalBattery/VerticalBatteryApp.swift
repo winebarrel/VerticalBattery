@@ -17,7 +17,8 @@ struct VerticalBatteryApp: App {
                 Text("N/A")
             }
             Divider()
-            Button("About \(Bundle.main.infoDictionary![kCFBundleNameKey as String]!)") {
+            let bundleName = Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
+            Button("About \(bundleName)") {
                 let githubRepo = "github.com/winebarrel/VerticalBattery"
                 NSApp.orderFrontStandardAboutPanel(options: [
                     NSApplication.AboutPanelOptionKey.applicationIcon: NSImage(named: "AppIcon")!,
