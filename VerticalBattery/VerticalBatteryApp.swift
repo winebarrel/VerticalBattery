@@ -17,7 +17,9 @@ struct VerticalBatteryApp: App {
                 Text("N/A")
             }
             Divider()
+            // swiftlint:disable force_cast
             let bundleName = Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
+            // swiftlint:enable force_cast
             Button("About \(bundleName)") {
                 let githubRepo = "github.com/winebarrel/VerticalBattery"
                 NSApp.orderFrontStandardAboutPanel(options: [
