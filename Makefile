@@ -18,6 +18,9 @@ swiftlint-analyze:
 	$(MAKE) build CONFIGURATION=Debug
 	swiftlint analyze --strict --compiler-log-path $(BUILD_LOG)
 
+.PHONY: lint
+lint:
+	swiftlint --strict
 
 .PHONY: test
 # https://github.com/cpisciotta/xcbeautify
