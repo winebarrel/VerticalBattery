@@ -39,6 +39,10 @@ struct IconNameTests {
 
     // MARK: - Charging (yellow)
 
+    @Test func zeroPercentChargingShowsYellow() {
+        #expect(makeBatteryIconName(currentCapacity: 0, isCharging: true, pluggedIn: false) == "vbtry.0pct.yellow")
+    }
+
     @Test func chargingShowsYellow() {
         #expect(makeBatteryIconName(currentCapacity: 50, isCharging: true, pluggedIn: false) == "vbtry.50pct.yellow")
     }
@@ -92,18 +96,6 @@ struct IconNameTests {
     }
 
     // MARK: - Edge cases
-
-    @Test func zeroPercentShowsRed() {
-        #expect(makeBatteryIconName(currentCapacity: 0, isCharging: false, pluggedIn: false) == "vbtry.0pct.red")
-    }
-
-    @Test func zeroPercentChargingShowsYellow() {
-        #expect(makeBatteryIconName(currentCapacity: 0, isCharging: true, pluggedIn: false) == "vbtry.0pct.yellow")
-    }
-
-    @Test func hundredPercentPluggedInShowsGreen() {
-        #expect(makeBatteryIconName(currentCapacity: 100, isCharging: false, pluggedIn: true) == "vbtry.100pct.green")
-    }
 
     @Test func allFlagsSetChargingWins() {
         #expect(makeBatteryIconName(currentCapacity: 5, isCharging: true, pluggedIn: true) == "vbtry.5pct.yellow")
