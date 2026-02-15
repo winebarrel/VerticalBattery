@@ -18,7 +18,9 @@ swiftlint-analyze:
 	$(MAKE) build CONFIGURATION=Debug
 	swiftlint analyze --strict --compiler-log-path $(BUILD_LOG)
 
+
 .PHONY: test
+# https://github.com/cpisciotta/xcbeautify
 test:
 	xcodebuild test -scheme VerticalBattery | xcbeautify
 

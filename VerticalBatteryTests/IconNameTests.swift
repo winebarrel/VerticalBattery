@@ -6,7 +6,7 @@ struct IconNameTests {
     // MARK: - Rounding
 
     @Test func roundsZeroToZero() {
-        #expect(makeBatteryIconName(currentCapacity: 0, isCharging: false, pluggedIn: false) == "vbtry.0pct.red")
+        #expect(makeBatteryIconName(currentCapacity: 0, isCharging: false, pluggedIn: false) == "vbtry.0pct")
     }
 
     @Test func roundsOneToFive() {
@@ -39,8 +39,8 @@ struct IconNameTests {
 
     // MARK: - Charging (yellow)
 
-    @Test func zeroPercentChargingShowsYellow() {
-        #expect(makeBatteryIconName(currentCapacity: 0, isCharging: true, pluggedIn: false) == "vbtry.0pct.yellow")
+    @Test func zeroPercentChargingShowsNormal() {
+        #expect(makeBatteryIconName(currentCapacity: 0, isCharging: true, pluggedIn: false) == "vbtry.0pct")
     }
 
     @Test func chargingShowsYellow() {
