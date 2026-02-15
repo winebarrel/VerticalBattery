@@ -65,12 +65,12 @@ jobs:
           # apply provisioning profile
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
-      - name: Test
-        run: xcodebuild test -scheme VerticalBattery
       - name: Build and Analyse
         run: |
           set -eo pipefail
           xcodebuild build analyze -scheme VerticalBattery -destination 'generic/platform=macOS' -allowProvisioningUpdates -configuration Debug CODE_SIGNING_ALLOWED=NO | tee build.log
+      - name: Test
+        run: xcodebuild test -scheme VerticalBattery
       - name: SwiftLint Analyse
         run: |
           ./swiftlint analyze --strict --compiler-log-path build.log
