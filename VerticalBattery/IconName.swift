@@ -1,13 +1,14 @@
 import math_h
 
 func makeBatteryIconName(currentCapacity: Int, isCharging: Bool, pluggedIn: Bool) -> String {
-    let pct = Int(ceil(Double(currentCapacity) / 5) * 5)
+    let clampedCapacity = min(max(currentCapacity, 0), 100)
+    let pct = Int(ceil(Double(clampedCapacity) / 5) * 5)
 
     let color = if isCharging {
         ".yellow"
     } else if pluggedIn {
         ".green"
-    } else if currentCapacity <= 20 {
+    } else if clampedCapacity <= 20 {
         ".red"
     } else {
         ""
