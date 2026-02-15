@@ -1,4 +1,4 @@
-import Foundation
+import math_h
 
 func makeBatteryIconName(currentCapacity: Int, isCharging: Bool, pluggedIn: Bool) -> String {
     let pct = Int(ceil(Double(currentCapacity) / 5) * 5)
