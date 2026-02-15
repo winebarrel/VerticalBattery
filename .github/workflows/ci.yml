@@ -65,6 +65,8 @@ jobs:
           # apply provisioning profile
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
+      - name: Test
+        run: xcodebuild test -scheme VerticalBattery
       - name: Build and Analyse
         run: |
           set -eo pipefail
