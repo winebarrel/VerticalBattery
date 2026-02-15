@@ -11,12 +11,21 @@ build: clean
 		-scheme $(APP_NAME) \
 		-configuration $(CONFIGURATION) \
 		-archivePath $(ARCHIVE_PATH) \
-		| tee $(BUILD_LOG)
+		| tee $(BUILD_LOG) | xcbeautify
 
 .PHONY: swiftlint-analyze
 swiftlint-analyze:
 	$(MAKE) build CONFIGURATION=Debug
 	swiftlint analyze --strict --compiler-log-path $(BUILD_LOG)
+
+.PHONY: lint
+lint:
+	swiftlint --strict
+
+.PHONY: test
+# https://github.com/cpisciotta/xcbeautify
+test:
+	xcodebuild test -scheme VerticalBattery | xcbeautify
 
 .PHONY: clean
 clean:

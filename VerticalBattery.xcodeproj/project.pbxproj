@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		ADAA00082D34B00000000008 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD8B69922D34A03600E89DF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD8B69992D34A03600E89DF8;
+			remoteInfo = VerticalBattery;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		AD8B699A2D34A03600E89DF8 /* VerticalBattery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VerticalBattery.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADAA00012D34B00000000001 /* VerticalBatteryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VerticalBatteryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = VerticalBattery;
 			sourceTree = "<group>";
 		};
+		ADAA00022D34B00000000002 /* VerticalBatteryTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = VerticalBatteryTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AD8B69972D34A03600E89DF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADAA00032D34B00000000003 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				AD8B699C2D34A03600E89DF8 /* VerticalBattery */,
+				ADAA00022D34B00000000002 /* VerticalBatteryTests */,
 				AD8B699B2D34A03600E89DF8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				AD8B699A2D34A03600E89DF8 /* VerticalBattery.app */,
+				ADAA00012D34B00000000001 /* VerticalBatteryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +96,26 @@
 			productReference = AD8B699A2D34A03600E89DF8 /* VerticalBattery.app */;
 			productType = "com.apple.product-type.application";
 		};
+		ADAA00062D34B00000000006 /* VerticalBatteryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADAA000B2D34B0000000000B /* Build configuration list for PBXNativeTarget "VerticalBatteryTests" */;
+			buildPhases = (
+				ADAA00042D34B00000000004 /* Sources */,
+				ADAA00032D34B00000000003 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADAA00072D34B00000000007 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				ADAA00022D34B00000000002 /* VerticalBatteryTests */,
+			);
+			name = VerticalBatteryTests;
+			productName = VerticalBatteryTests;
+			productReference = ADAA00012D34B00000000001 /* VerticalBatteryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -83,6 +128,10 @@
 				TargetAttributes = {
 					AD8B69992D34A03600E89DF8 = {
 						CreatedOnToolsVersion = 16.2;
+					};
+					ADAA00062D34B00000000006 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = AD8B69992D34A03600E89DF8;
 					};
 				};
 			};
@@ -101,6 +150,7 @@
 			projectRoot = "";
 			targets = (
 				AD8B69992D34A03600E89DF8 /* VerticalBattery */,
+				ADAA00062D34B00000000006 /* VerticalBatteryTests */,
 			);
 		};
 /* End PBXProject section */
@@ -145,7 +195,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ADAA00042D34B00000000004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ADAA00072D34B00000000007 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD8B69992D34A03600E89DF8 /* VerticalBattery */;
+			targetProxy = ADAA00082D34B00000000008 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AD8B69A72D34A03800E89DF8 /* Debug */ = {
@@ -324,6 +389,40 @@
 			};
 			name = Release;
 		};
+		ADAA00092D34B00000000009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 97A8B2WE2P;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.winebarrel.VerticalBatteryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VerticalBattery.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VerticalBattery";
+			};
+			name = Debug;
+		};
+		ADAA000A2D34B0000000000A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 97A8B2WE2P;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.winebarrel.VerticalBatteryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VerticalBattery.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VerticalBattery";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -341,6 +440,15 @@
 			buildConfigurations = (
 				AD8B69AA2D34A03800E89DF8 /* Debug */,
 				AD8B69AB2D34A03800E89DF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADAA000B2D34B0000000000B /* Build configuration list for PBXNativeTarget "VerticalBatteryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADAA00092D34B00000000009 /* Debug */,
+				ADAA000A2D34B0000000000A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
