@@ -18,6 +18,10 @@ swiftlint-analyze:
 	$(MAKE) build CONFIGURATION=Debug
 	swiftlint analyze --strict --compiler-log-path $(BUILD_LOG)
 
+.PHONY: test
+test:
+	xcodebuild test -scheme VerticalBattery
+
 .PHONY: clean
 clean:
 	rm -rf $(BUILD_DIR)
