@@ -11,7 +11,7 @@ build: clean
 		-scheme $(APP_NAME) \
 		-configuration $(CONFIGURATION) \
 		-archivePath $(ARCHIVE_PATH) \
-		| tee $(BUILD_LOG)
+		| tee $(BUILD_LOG) | xcbeautify
 
 .PHONY: swiftlint-analyze
 swiftlint-analyze:

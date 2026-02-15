@@ -1,4 +1,7 @@
+// swiftlint:disable unused_import
 import math_h
+
+// swiftlint:enable unused_import
 
 func makeBatteryIconName(currentCapacity: Int, isCharging: Bool, pluggedIn: Bool) -> String {
     let clampedCapacity = min(max(currentCapacity, 0), 100)
