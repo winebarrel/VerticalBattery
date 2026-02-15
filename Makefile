@@ -20,7 +20,7 @@ swiftlint-analyze:
 
 .PHONY: test
 test:
-	xcodebuild test -scheme VerticalBattery
+	xcodebuild test -scheme VerticalBattery | xcbeautify
 
 .PHONY: clean
 clean:
